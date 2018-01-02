@@ -109,3 +109,54 @@ INFO:root:Constructing parser
 INFO:root:Constructing put subparcer
 INFO:root:Constructing get subparcer
 INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'Some new stuff here'
+DEBUG:root:Snippet stored successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:Snippet stored successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Gracie': 'Is a white dog'
+DEBUG:root:Snippet stored successfully
