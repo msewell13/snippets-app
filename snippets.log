@@ -20,3 +20,92 @@ INFO:root:Constructing parser
 INFO:root:Constructing put subparcer
 INFO:root:Constructing get subparcer
 ERROR:root:FIXME: Unimplemented - put('list', 'A sequence of things - created using []')
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Storing snippet 'Test': 'This is a test snippet'
+DEBUG:root:Snippet stored successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'new':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Snippet retrieved successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Snippet retrieved successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Snippet retrieved successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':
+DEBUG:root:Snippet retrieved successfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Tes':
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Database connection established
+INFO:root:Constructing parser
+INFO:root:Constructing put subparcer
+INFO:root:Constructing get subparcer
+INFO:root:Retrieved snippet 'Test':

@@ -1,14 +1,24 @@
 import logging
 import argparse
+import psycopg2
 
 # Set the log output file, and the log level
 logging.basicConfig(filename='snippets.log', level=logging.DEBUG)
+
+logging.debug('Connecting to PostgreSQL')
+connection = psycopg2.connect(database='snippets')
+logging.debug('Database connection established')
 
 
 def put(name, snippet):
     '''Store a snippet with the associated name.
     Returns the name and the snippet.'''
-    logging.error('FIXME: Unimplemented - put({!r}, {!r})'.format(name, snippet))
+    logging.info('Storing snippet {!r}: {!r}'.format(name, snippet))
+    cursor = connection.cursor()
+    command = 'insert into snippets values (%s, %s)'
+    cursor.execute(command, (name, snippet))
+    connection.commit()
+    logging.debug('Snippet stored successfully')
     return name, snippet
     
     
@@ -16,8 +26,16 @@ def get(name):
     '''Retrieve the snippet with the given name.
     If there is no such snippet, return '404: Snippet Not Found'.
     Returns the snippet'''
-    logging.error('FIXME: Unimplemented - get({!r})'.format(name))
-    return ''
+    logging.info('Retrieved snippet {!r}:'.format(name))
+    cursor = connection.cursor()
+    command = 'select keyword, message from snippets where keyword=%s'
+    cursor.execute(command, (name,))
+    row = cursor.fetchone()
+    connection.commit()
+    if not row:
+        '''No snippet was found with that name'''
+        return '404: Snippet Not Found'
+    return row[1]
     
     
 def main():
