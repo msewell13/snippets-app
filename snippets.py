@@ -31,13 +31,30 @@ def get(name):
     Returns the snippet'''
     logging.info('Retrieved snippet {!r}:'.format(name))
     with connection, connection.cursor() as cursor:
-        cursor.execute("select message from snippets where keyword=%s", (name,))
+        cursor.execute('select message from snippets where keyword=%s', (name,))
         row = cursor.fetchone()
     if not row:
         '''No snippet was found with that name'''
         return '404: Snippet Not Found'
-    return row[1]
+    return row[0]
     
+    
+def search(string):
+    '''Search message for a string'''
+    with connection, connection.cursor() as cursor:
+        cursor.execute("select * from snippets where message like '%{}%'".format(string))
+        fetched = cursor.fetchall()
+        logging.info('Retrieved: {!r}:'.format(fetched))
+        return fetched
+    
+    
+def catalog():
+    '''Query the keywords from the snippets table'''
+    with connection, connection.cursor() as cursor:
+        cursor.execute('select keyword from snippets')
+        fetched = cursor.fetchall()
+        logging.info('Retrieved: %s', (fetched))
+        return fetched
     
 def main():
     '''Main function'''
@@ -46,16 +63,25 @@ def main():
     
     subparsers = parser.add_subparsers(dest='command', help='Available commands')
     
-    # Subparcer for the put command
-    logging.info('Constructing put subparcer')
+    # Subparser for the put command
+    logging.info('Constructing put subparser')
     put_parser = subparsers.add_parser('put', help='Store a snippet')
     put_parser.add_argument('name', help='Name of the snippet')
     put_parser.add_argument('snippet', help='Snippet text')
     
-    # Subparcer for the get command
-    logging.info('Constructing get subparcer')
+    # Subparser for the get command
+    logging.info('Constructing get subparser')
     get_parser = subparsers.add_parser('get', help='get a snippet')
     get_parser.add_argument('name', help='Name of the snippet')
+    
+    # Subparser for the catalog command
+    logging.info('Constructing catalog subparser')
+    catalog_parser = subparsers.add_parser('catalog', help='get all keys')
+    
+    # Subparcer for the search command
+    logging.info('Constructing search subparser')
+    search_parser = subparsers.add_parser('search', help='search for string in message')
+    search_parser.add_argument('string', help='String you want to search for')
     
     arguments = parser.parse_args()
     #Convert parsed arguments from Namespace to dictionary
@@ -68,6 +94,11 @@ def main():
     elif command == 'get':
         snippet = get(**arguments)
         print('Retrieved snippet: {!r}'.format(snippet))
+    elif command == 'search':
+        results = search(**arguments)
+        print('Results: {!r}'.format(results))
+    elif command == 'catalog':
+        print('Keys: {!r}'.format(catalog()))
     
     
     
